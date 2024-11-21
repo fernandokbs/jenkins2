@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { labels 'agente1' }
     stages {
         stage('Verificat tools') {
             steps {
