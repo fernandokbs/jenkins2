@@ -11,5 +11,11 @@ pipeline {
                 echo "Jenkins URL: ${env.JENKINS_URL}"
             }
         }
+
+        stage('Run test') {
+            steps {
+                sh 'docker run jenkins-laravel ./vendor/bin/phpunit tests'
+            }
+        }
     }
 }
